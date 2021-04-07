@@ -1,0 +1,11 @@
+---
+applications:
+  - name: go_health_check
+    health-check-type: http
+    health-check-http-endpoint: /health
+    memory: 1G
+    disk_quota: 1G
+    instances: 1
+    buildpack: https://github.com/heroku/heroku-buildpack-go.git
+    env:
+      GOVERSION: go1.8
